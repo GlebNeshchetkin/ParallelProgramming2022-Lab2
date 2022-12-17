@@ -152,8 +152,6 @@ int main() {
             printf("%f ", x1[i]);
         }
         printf("\n");
-        //fprintf(ouf, "%f, %f, %f, %f, %f, %f\n", Ax, Ay, Bx, By, C, time_taken);
-        //fflush(ouf);
     }
     printf("->%f\n", time_complete_sum/6);
     cudaFree(d_x0);
