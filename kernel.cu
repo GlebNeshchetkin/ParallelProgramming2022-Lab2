@@ -140,7 +140,6 @@ int main() {
 
         cudaMemcpy(x1, d_x1, N * sizeof(double), cudaMemcpyDeviceToHost);
         time_complete_sum += time_sum;
-        printf("%f\n", time_sum);
         parallelA << <1, 2 >> > (d_a0, d_a1, x1[0], x1[1]);
         //cudaMemcpy(a1, d_a1, 2 * sizeof(double), cudaMemcpyDeviceToHost);
         cudaMemcpy(d_a0, d_a1, 2 * sizeof(double), cudaMemcpyDeviceToDevice);
